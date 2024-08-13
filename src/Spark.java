@@ -25,7 +25,7 @@ public class Spark {
     public static Spark createRandomSpark(PApplet p5) {
         float x = p5.random(0f, 800f);
         float y = p5.random(0f, 600f);
-        return new Circle(p5, x, y);
+        return new Rectangle(p5, x, y);
     }
 
 
