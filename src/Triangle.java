@@ -12,7 +12,7 @@ public class Triangle extends Spark {
     public void display() {
         p5.fill(myColour);
         float sizeDividedBy2 = size / 2;
-        p5.triangle(x, y-sizeDividedBy2, x-sizeDividedBy2, y +sizeDividedBy2,x+sizeDividedBy2, y+sizeDividedBy2);
+        p5.triangle(x, y - sizeDividedBy2, x - sizeDividedBy2, y + sizeDividedBy2, x + sizeDividedBy2, y + sizeDividedBy2);
     }
 
     @Override
