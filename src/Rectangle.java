@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 
-public class Rectangle extends Spark {
+public class Rectangle extends BaseSpark {
     float size;
 
     public Rectangle(PApplet p5, float x, float y) {

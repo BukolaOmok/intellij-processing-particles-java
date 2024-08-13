@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 
-public class Triangle extends Spark {
+public class Triangle extends BaseSpark {
     float size;
 
     public Triangle(PApplet p5, float x, float y) {

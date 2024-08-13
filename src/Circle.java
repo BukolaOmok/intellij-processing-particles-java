@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 
-public class Circle extends Spark {
+public class Circle extends BaseSpark {
     float size;
 
     public Circle(PApplet p5, float x, float y) {
