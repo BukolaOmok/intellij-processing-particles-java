@@ -25,7 +25,17 @@ public class Spark {
     public static Spark createRandomSpark(PApplet p5) {
         float x = p5.random(0f, 800f);
         float y = p5.random(0f, 600f);
-        return new Triangle(p5, x, y);
+        int shape = (int) p5.random(3); // Random integer: 0, 1, or 2
+
+        switch (shape) {
+            case 0:
+                return new Circle(p5, x, y);
+            case 1:
+                return new Triangle(p5, x, y);
+            case 2:
+                return new Rectangle(p5, x, y);
+        }
+        return null;
     }
 
 
