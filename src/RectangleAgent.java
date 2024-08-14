@@ -1,9 +1,9 @@
 import processing.core.PApplet;
 
-public class Circle extends BaseSpark {
+public class RectangleAgent extends BaseSpark {
     float size;
 
-    public Circle(PApplet p5) {
+    public RectangleAgent(PApplet p5) {
         super(p5, p5.random(0f, 800f), p5.random(0f, 600f));
         this.size = p5.random(10, 50);
     }
@@ -11,7 +11,7 @@ public class Circle extends BaseSpark {
     @Override
     public void display() {
         p5.fill(myColour);
-        p5.circle(x, y, size);
+        p5.rect(x, y, size, size);
     }
 
     @Override
@@ -21,4 +21,5 @@ public class Circle extends BaseSpark {
         y += p5.random(-stepSize, stepSize);
         size = PApplet.constrain(size + p5.random(-1, 1), 5, 100);
     }
+
 }

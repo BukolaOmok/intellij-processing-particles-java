@@ -1,9 +1,9 @@
 import processing.core.PApplet;
 
-public class Triangle extends BaseSpark {
+public class CircleAgent extends BaseSpark {
     float size;
 
-    public Triangle(PApplet p5) {
+    public CircleAgent(PApplet p5) {
         super(p5, p5.random(0f, 800f), p5.random(0f, 600f));
         this.size = p5.random(10, 50);
     }
@@ -11,8 +11,7 @@ public class Triangle extends BaseSpark {
     @Override
     public void display() {
         p5.fill(myColour);
-        float sizeDividedBy2 = size / 2;
-        p5.triangle(x, y - sizeDividedBy2, x - sizeDividedBy2, y + sizeDividedBy2, x + sizeDividedBy2, y + sizeDividedBy2);
+        p5.circle(x, y, size);
     }
 
     @Override

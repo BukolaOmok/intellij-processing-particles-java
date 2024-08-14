@@ -23,8 +23,8 @@ public class Main extends PApplet {
         int numToCreate = 50;
 
         for (int i = 0; i < numToCreate; i++) {
-            baseSparks.add(new Circle(this));
-            baseSparks.add(new Rectangle(this));
+            baseSparks.add(new CircleAgent(this));
+            baseSparks.add(new RectangleAgent(this));
         }
     }
 
@@ -40,7 +40,7 @@ public class Main extends PApplet {
         }
 
         if (mousePressed) {
-            baseSparks.add(new Triangle(this));
+            baseSparks.add(new TriangleAgent(this));
         }
     }
 }

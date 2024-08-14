@@ -1,9 +1,9 @@
 import processing.core.PApplet;
 
-public class Rectangle extends BaseSpark {
+public class TriangleAgent extends BaseSpark {
     float size;
 
-    public Rectangle(PApplet p5) {
+    public TriangleAgent(PApplet p5) {
         super(p5, p5.random(0f, 800f), p5.random(0f, 600f));
         this.size = p5.random(10, 50);
     }
@@ -11,7 +11,8 @@ public class Rectangle extends BaseSpark {
     @Override
     public void display() {
         p5.fill(myColour);
-        p5.rect(x, y, size, size);
+        float sizeDividedBy2 = size / 2;
+        p5.triangle(x, y - sizeDividedBy2, x - sizeDividedBy2, y + sizeDividedBy2, x + sizeDividedBy2, y + sizeDividedBy2);
     }
 
     @Override
@@ -21,5 +22,4 @@ public class Rectangle extends BaseSpark {
         y += p5.random(-stepSize, stepSize);
         size = PApplet.constrain(size + p5.random(-1, 1), 5, 100);
     }
-
 }
