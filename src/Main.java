@@ -20,12 +20,11 @@ public class Main extends PApplet {
     @Override
     public void setup() {
         baseSparks = new ArrayList<>();
-        int numToCreate = 100;
+        int numToCreate = 50;
 
         for (int i = 0; i < numToCreate; i++) {
             baseSparks.add(new Circle(this));
             baseSparks.add(new Rectangle(this));
-            baseSparks.add(new Triangle(this));
         }
     }
 
@@ -38,6 +37,10 @@ public class Main extends PApplet {
 
         for (BaseSpark s : baseSparks) {
             s.update();
+        }
+
+        if (mousePressed) {
+            baseSparks.add(new Triangle(this));
         }
     }
 }
