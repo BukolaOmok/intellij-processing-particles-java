@@ -5,9 +5,9 @@ public abstract class BaseSpark {
     public final PApplet p5;
     float x;
     float y;
-    public int myColour;
+    public final int myColour;
 
-    public BaseSpark(PApplet p5, float x, float y) {
+    protected BaseSpark(PApplet p5, float x, float y) {
         this.p5 = p5;
         this.x = x;
         this.y = y;

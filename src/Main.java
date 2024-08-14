@@ -23,29 +23,10 @@ public class Main extends PApplet {
         int numToCreate = 100;
 
         for (int i = 0; i < numToCreate; i++) {
-            baseSparks.add(createRandomCircle());
-            baseSparks.add(createRandomRectangle());
-            baseSparks.add(createRandomTriangle());
+            baseSparks.add(new Circle(this));
+            baseSparks.add(new Rectangle(this));
+            baseSparks.add(new Triangle(this));
         }
-    }
-
-    public Circle createRandomCircle() {
-        float x = random(0f, 800f);
-        float y = random(0f, 600f);
-
-        return new Circle(this, x, y);
-    }
-    public Rectangle createRandomRectangle() {
-        float x = random(0f, 800f);
-        float y = random(0f, 600f);
-
-        return new Rectangle(this, x, y);
-    }
-    public Triangle createRandomTriangle() {
-        float x = random(0f, 800f);
-        float y = random(0f, 600f);
-
-        return new Triangle(this, x, y);
     }
 
     @Override

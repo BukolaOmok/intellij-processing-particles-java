@@ -3,8 +3,8 @@ import processing.core.PApplet;
 public class Rectangle extends BaseSpark {
     float size;
 
-    public Rectangle(PApplet p5, float x, float y) {
-        super(p5, x, y);
+    public Rectangle(PApplet p5) {
+        super(p5, p5.random(0f, 800f), p5.random(0f, 600f));
         this.size = p5.random(10, 50);
     }
 

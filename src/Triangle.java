@@ -3,8 +3,8 @@ import processing.core.PApplet;
 public class Triangle extends BaseSpark {
     float size;
 
-    public Triangle(PApplet p5, float x, float y) {
-        super(p5, x, y);
+    public Triangle(PApplet p5) {
+        super(p5, p5.random(0f, 800f), p5.random(0f, 600f));
         this.size = p5.random(10, 50);
     }
 
